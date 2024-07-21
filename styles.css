@@ -1,0 +1,13 @@
+.mainMenu {
+    text-align: center;
+}
+
+.levels {
+    display: flex;
+    justify-content: center;
+}
+
+
+.levels p {
+    margin: 10px; 
+}
