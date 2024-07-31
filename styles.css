@@ -1,20 +1,29 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+canvas {
+    display: block; /* Removes the small gap below the canvas */
+}
+
 .mainMenu {
     margin-top: 10vh;
     text-align: center;
     font-size: 2vh;
 }
 
-.levels {
+.level {
     margin-top: 10vh;
     display: flex;
     justify-content: center;
 }
 
-
-.levels p {
-    margin:2vh;
+.level p {
+    margin: 2vh;
     padding: 7vh;
     border-radius: 4vh;
-    border: #000000, 2vh;
-    background-color: #fff111;
+    border: #000000 2vh;
+    background-color: #34aeff;
 }
