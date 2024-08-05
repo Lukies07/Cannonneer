@@ -27,3 +27,9 @@ canvas {
     border: #000000 2vh;
     background-color: #34aeff;
 }
+
+canvas {
+    position: absolute;
+    top: 0px;
+}
+
