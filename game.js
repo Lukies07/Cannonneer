@@ -57,12 +57,12 @@ canvas.addEventListener('mousemove', (event) => {
     let mouseY = event.clientY;
     let dx = mouseX - cannon.pivotPoint.x;
     let dy = mouseY - cannon.pivotPoint.y;
-    cannon.angle = Math.atan2(dy, dx) + Math.PI / 2; // Calculate the angle and add π/2
+    cannon.angle = Math.atan2(dy, dx) + Math.PI / 2; // Calculate the angle and add pi/2
     drawCannon(cannon.angle); // Draw the cannon at the calculated angle
 });
 
 canvas.addEventListener('click', function(event) {
     console.log(cannon.angle*(180/Math.PI)) //print the anlge of the cannon in degrees instead of radians, so i can read it
-    
+
     
 });
