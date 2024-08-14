@@ -8,7 +8,7 @@ let cannon = {
     width: 80,
     height: 240,
     angle: undefined,
-    pivotOffset: 0.17, // Pivot point offset from the bottom (5%)
+    pivotOffset: 0.166, // Pivot point offset from the bottom (5%)
     pivotPoint: { x: undefined, y: undefined },
 };
 
@@ -63,6 +63,5 @@ canvas.addEventListener('mousemove', (event) => {
 
 canvas.addEventListener('click', function(event) {
     console.log(cannon.angle*(180/Math.PI)) //print the anlge of the cannon in degrees instead of radians, so i can read it
-
     
 });
