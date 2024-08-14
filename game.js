@@ -12,6 +12,13 @@ let cannon = {
     pivotPoint: { x: undefined, y: undefined },
 };
 
+let cannonBall = {
+    x: undefined,
+    y: undefined,
+    radius: 10, //size of the ball
+    summoned: false
+}
+
 cannonImage.src = "images/cannon.png";  // Make sure the path is correct
 
 // Update cannon position based on canvas size
@@ -65,3 +72,11 @@ canvas.addEventListener('click', function(event) {
     console.log(cannon.angle*(180/Math.PI)) //print the anlge of the cannon in degrees instead of radians, so i can read it
     
 });
+
+function drawCannonBall() {
+
+}
+
+function shootCannonBall() {
+
+} 
