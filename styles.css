@@ -5,7 +5,8 @@ body, html {
 }
 
 canvas {
-    display: block; /* Removes the small gap below the canvas */
+    position: absolute;
+    top: 0px;
 }
 
 .mainMenu {
@@ -24,12 +25,7 @@ canvas {
     margin: 2vh;
     padding: 7vh;
     border-radius: 4vh;
-    border: #000000 2vh;
     background-color: #34aeff;
-}
-
-canvas {
-    position: absolute;
-    top: 0px;
+    border-color: #000000;
 }
 
