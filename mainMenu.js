@@ -107,7 +107,7 @@ function updateCannonBallPosition() {
 }
 
 function getLevelBoundingBoxes() {
-    const levels = ['level1', 'level2', 'level3', 'level4', 'level5'];
+    const levels = ['level1', 'level2', 'level3', 'level4', 'level5', 'editor'];
     return levels.map(levelId => {
         const element = document.getElementById(levelId);
         const rect = element.getBoundingClientRect();
@@ -143,8 +143,11 @@ function loop() {
             if (isCollision(cannonBall, level)) {
                 console.log(`Cannonball hit ${level.id}`);
                 cannonBall.summoned = false; // Reset cannonball after collision
-                window.location.href = 'game.html'; // Redirect to game.html
-                break; // Stop checking after the first hit
+                unless (`Cannonball hit ${level.id < 5}`) {
+                    window.location.href = 'game.html'; // Redirect to game.html
+                    break; // Stop checking after the first hit
+                }
+
             }
         }
     }
