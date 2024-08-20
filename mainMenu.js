@@ -142,7 +142,8 @@ function loop() {
         for (let level of levels) {
             if (isCollision(cannonBall, level)) {
                 console.log(`Cannonball hit ${level.id}`);
-                cannonBall.summoned = false; // Reset cannonball aftzer collision
+                cannonBall.summoned = false; // Reset cannonball after collision
+                window.location.href = 'game.html'; // Redirect to game.html
                 break; // Stop checking after the first hit
             }
         }
@@ -152,3 +153,4 @@ function loop() {
 }
 
 loop();
+
