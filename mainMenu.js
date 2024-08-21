@@ -34,6 +34,7 @@ resizeCanvas();
 canvas.addEventListener('mousemove', (event) => {
     let mouseX = event.clientX;
     let mouseY = event.clientY;
+    console.log('X: ', mouseX, 'Y: ', mouseY)
     let dx = mouseX - cannon.pivotPoint.x;
     let dy = mouseY - cannon.pivotPoint.y;
     cannon.angle = Math.atan2(dy, dx) + Math.PI / 2;
@@ -143,11 +144,15 @@ function loop() {
             if (isCollision(cannonBall, level)) {
                 console.log(`Cannonball hit ${level.id}`);
                 cannonBall.summoned = false; // Reset cannonball after collision
-                unless (`Cannonball hit ${level.id < 5}`) {
+
+                // Redirect based on the level id
+                if (level.id === 'editor') {
+                    window.location.href = 'editor.html'; // Redirect to editor.html
+                } else {
                     window.location.href = 'game.html'; // Redirect to game.html
-                    break; // Stop checking after the first hit
                 }
 
+                break; // Stop checking after the first hit
             }
         }
     }

@@ -1,12 +1,18 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrollbars */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
 }
 
 canvas {
     position: absolute;
-    top: 0px;
+    width: 85vw; /* 80% of the viewport width */
+    height: 85vh; /* 80% of the viewport height */
+    border: 10vw solid black; /* Optional: add a border to the canvas */
 }
 
 .mainMenu {
